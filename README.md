@@ -5,8 +5,7 @@ humbleSlider-jQuery
 No, not really, but I tried!
 
 ####Features
-* Responsive images via hisrc
-    That means pixel density and network speed are considered when loading images.
+* Responsive images via hisrc, that means pixel density and network speed are considered when loading images.
 * Responsive layout that always maintains aspect ratio.
 * Navigation bar.
 * Current image / total images counter.
