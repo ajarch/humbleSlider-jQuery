@@ -3,6 +3,7 @@ humbleSlider-jQuery
 
 ###The be-all-end-all responsive, swipe-supporting jQuery gallery solution.
 No, not really, but I tried!
+Here is a [DEMO](http://humbleslider.webnitr.at/) of what it can look like!
 
 ####Features
 * Responsive images via hisrc, that means pixel density and network speed are considered when loading images.
@@ -34,6 +35,45 @@ Of course there is some markup necessary, which looks like this:
 </div>
 ```
 What's going on with those images, you ask. This is hisrc's way of providing multiple versions of the same image, from low res to std res to high res, which is essential to cover the wide range of native resolutions and viewport sizes we see today. hisrc also detects the network speed of your users and then, combined with the pixel density aspect, loads the most appropriate image.
+
+####The config
+Simply pass this object when calling the plugin like so `$('').humbleSlider({/* config */});`.
+Default values will be used for any property not passed in the config.
+```javascript
+{
+        /**
+         * Duration in seconds for sliding one image. Sliding 3 images means (3 * speed) = 1.5 sec default
+         */
+        speed:  0.5,
+
+        /**
+         * configures touch gesture support
+         *
+         * trigger: slider must have a parent element matching this selector, to support swipe.
+         * default value '.touch' aims for Modernizr, which will put .touch on html if touch events present.
+         *
+         * if swipe should always be active, set this to 'html' or 'body'.
+         */
+        swipe: {
+        enabled: true,
+            trigger: '.touch'
+        },
+
+        /**
+         * configures key navigation support
+         * previous / next values represent the key number, default is left and right arrow key.
+         */
+        key: {
+            enabled: true,
+            previous: 37,
+            next: 39
+        },
+
+        navigation: true, // you really shouldn't disable it!
+
+        height: '50%' // aspect ratio of the images, 50% equals 2:1 ratio
+    }
+```
 
 ####Credits
 This plugin makes heavy use of [hisrc](https://github.com/teleject/hisrc) and [jquery.touchSwipe](https://github.com/mattbryson/TouchSwipe-Jquery-Plugin). Many many thanks to you guys.
