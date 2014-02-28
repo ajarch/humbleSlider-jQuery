@@ -34,7 +34,9 @@ Of course there is some markup necessary, which looks like this:
     </div>
 </div>
 ```
-What's going on with those images, you ask. This is hisrc's way of providing multiple versions of the same image, from low res to std res to high res, which is essential to cover the wide range of native resolutions and viewport sizes we see today. hisrc also detects the network speed of your users and then, combined with the pixel density aspect, loads the most appropriate image.
+What's going on with those images, you ask. This is hisrc's way of providing multiple versions of the same image, from low res to std res to high res, which is essential to cover the wide range of native resolutions and viewport sizes we see today. hisrc also detects the network speed of your users and then, combined with the pixel density aspect, loads the most appropriate image. The low res image is provided through the normal `src`-tag, which also acts as a fallback for older devices or placeholder untill the higher res images are loaded.
+The `data-1x` and `data-2x` tags contain the URLs of the std res and hi res image, respectively.
+(Note that what is "low res", "std res" or "hi res" is merely a terminology issue. You can and should adapt how you use those three versions to best fit your application).
 
 ####The config
 Simply pass this object when calling the plugin like so `$('').humbleSlider({/* config */});`.
