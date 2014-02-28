@@ -1,4 +1,4 @@
-The MIT License (MIT)
+The MIT License (MIT), modified
 
 Copyright (c) 2014 alexJunger
 
@@ -11,6 +11,12 @@ subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
+
+I shall be mentioned as the author of this plugin in documentations and informational ressources of your projects,
+in which you make use of this plugin. The photographs included in this repository are not subject of this license 
+and are purely for demonstrational purposes, they are therefore exempt from the granted permissions.
+They are not intended for redistribution, unless written permission is granted.
+Just shoot me a mail, I'm a nice person. :)
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
