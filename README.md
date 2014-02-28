@@ -37,6 +37,8 @@ Of course there is some markup necessary, which looks like this:
 What's going on with those images, you ask. This is hisrc's way of providing multiple versions of the same image, from low res to std res to high res, which is essential to cover the wide range of native resolutions and viewport sizes we see today. hisrc also detects the network speed of your users and then, combined with the pixel density aspect, loads the most appropriate image.
 
 ####The config
+Simply pass this object when calling the plugin like so `$('').humbleSlider({/* config */});`.
+Default values will be used for any property not passed in the config.
 ```javascript
 {
         /**
@@ -70,7 +72,7 @@ What's going on with those images, you ask. This is hisrc's way of providing mul
         navigation: true, // you really shouldn't disable it!
 
         height: '50%' // aspect ratio of the images, 50% equals 2:1 ratio
-    };
+    }
 ```
 
 ####Credits
