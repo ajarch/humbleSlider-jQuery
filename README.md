@@ -3,6 +3,7 @@ humbleSlider-jQuery
 
 ###The be-all-end-all responsive, swipe-supporting jQuery gallery solution.
 No, not really, but I tried!
+Here is a [DEMO](http://humbleslider.webnitr.at/) of what it can look like!
 
 ####Features
 * Responsive images via hisrc, that means pixel density and network speed are considered when loading images.
