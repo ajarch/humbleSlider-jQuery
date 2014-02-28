@@ -81,20 +81,22 @@
                 }
 
                 // support slider navigation by arrow keys
-                $(document).keydown(function(e){
-                    switch(e.which) {
-                        case this.config.key.previous: // previous image
-                            this.inputHandler(-1);
-                            break;
+                if(this.config.key.enabled) {
+                    $(document).keydown(function(e){
+                        switch(e.which) {
+                            case this.config.key.previous: // previous image
+                                this.inputHandler(-1);
+                                break;
 
-                        case this.config.key.next: // next image
-                            this.inputHandler(1);
-                            break;
+                            case this.config.key.next: // next image
+                                this.inputHandler(1);
+                                break;
 
-                        default: return; // exit this handler for other keys
-                    }
-                    e.preventDefault();
-                }.bind(this));
+                            default: return; // exit this handler for other keys
+                        }
+                        e.preventDefault();
+                    }.bind(this));
+                }
 
                 this.totalImages = this.$el.find('.slider-image').length;
                 this.adjustSize();
