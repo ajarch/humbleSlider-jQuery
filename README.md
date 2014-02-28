@@ -9,7 +9,7 @@ All you have to do is `$('#slider').humbleSlider();` and off we go.
 Of course there is some markup necessary, which looks like this:
 
 ####The markup
-```
+```html
 <div id="slider" class="slider">
     <div class="container">
         <div class="slider-image">
