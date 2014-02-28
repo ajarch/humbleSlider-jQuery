@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="vendor/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="slider" class="slider">
+    <div class="container">
+        <div class="slider-image">
+            <img src="img/img1.jpg" data-1x="img/img1@1x.jpg" data-2x="img/img1@2x.jpg">
+        </div>
+        <div class="slider-image">
+            <img src="img/img2.jpg" data-1x="img/img2@1x.jpg" data-2x="img/img2@2x.jpg">
+        </div>
+        <div class="slider-image">
+            <img src="img/img1.jpg" data-1x="img/img3@1x.jpg" data-2x="img/img3@2x.jpg">
+        </div>
+    </div>
+</div>
+
+
+<script src="vendor/jquery.touchSwipe.min.js"></script>
+<script src="vendor/modernizr.min.js"></script>
+<script src="vendor/hiSrc.js"></script>
+<script src="js/jquery.humbleSlider.js"></script>
+
+<script>
+    // ready to rumble...
+    $(document).ready(function() {
+       $('#slider').humbleSlider();
+    });
+</script>
+</body>
+</html>
