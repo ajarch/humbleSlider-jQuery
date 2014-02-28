@@ -1,0 +1,23 @@
+{
+	"name": "humbleSlider",
+	"version": "0.5",
+	"title": "humbleSlider",
+	"author": {
+		"name" : "Alexander Junger",
+		"email" : "hello@alexanderjunger.at",
+        	"url" : "http://webnitr.at/"
+	},
+	"description": "jQuery plugin for fully responsive, touch supporting image sliders.",
+	"licenses": [
+	    {
+	        "type": "MIT (modified)",
+	        "url": "https://github.com/alexJunger/humbleSlider-jQuery/blob/master/LICENSE"
+	    }
+	],
+	"homepage": "https://github.com/alexJunger/humbleSlider-jQuery",
+	"dependencies": {
+        	"jquery": ">=1.8.2",
+		"hisrc": "*",
+		"touchSwipe": ">=1.6"
+	}
+}
