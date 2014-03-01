@@ -1,3 +1,13 @@
+/**
+ * ===================
+ * jQuery humbleSlider
+ * ===================
+ * @author Alexander Junger
+ * @version 0.5.2
+ *
+ * See license file for information regarding use, distribution and manipulation of this piece of software.
+ */
+
 (function($) {
 
 	$.fn.humbleSlider = function humbleSlider(config) {
