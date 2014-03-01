@@ -75,12 +75,17 @@
                 if (this.totalImages == 1) {
                     // hide controls, in case they somehow made it into the markup
                     this.$el.find(".slider-controls").addClass("hide");
-                } else {
+                }
+                /**
+                 * TODO
+                 * refactor according to presence of swipesuggestInterval feature
+                else {
                     // stop suggesting swipe, if present, as soon as the slider is clicked on
                     this.$el.on('click', function() {
                         clearInterval(this.swipeSuggestInterval);
                     });
                 }
+                */
 
                 if(this.config.swipe.enabled) {
                     $(this.config.swipe.trigger).find(this.$container).swipe( {
@@ -202,6 +207,7 @@
                 this.slide(transitionOffset);
             },
 
+            /*
             setSwipeSuggest : function() {
                 this.$container.css('left', '-15px');
                 setTimeout(function() {
@@ -214,6 +220,7 @@
             },
 
             swipeSuggestInterval : setInterval(this.setSwipeSuggest, 3000),
+             */
 
             /**
              * Simple function for swipe gesture to slide one image left
@@ -242,11 +249,12 @@
              */
             scrollImages : function(distance, duration)
             {
+                /*
                 // clear swipeSuggestInterval on touch devices if still active
                 if(this.swipeSuggestInterval) {
                     clearInterval(this.swipeSuggestInterval);
                 }
-
+                */
                 //inverse the number we set in the css
                 var value = (distance < 0 ? "" : "-") + Math.abs(distance).toString();
                 this.$container.css("transition", "left " + duration + "s ease");
