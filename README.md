@@ -72,6 +72,17 @@ Default values will be used for any property not passed in the config.
         },
 
         navigation: true, // you really shouldn't disable it!
+        
+        /**
+         * Path to image that will be shown in the navigation bar...
+         * Default is a white base64 encoded SVG arrow
+         */
+        nextImage: 'data:image/svg+xml;base64...',
+        
+        /**
+        * example:
+        * nextImage: '../img/arrow.png',
+        */
 
         height: '50%' // aspect ratio of the images, 50% equals 2:1 ratio
     }
