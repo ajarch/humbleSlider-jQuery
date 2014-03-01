@@ -50,7 +50,7 @@
                 if(!this.isSingular() && this.config.navigation) {
                     this.$el.append(
                         "<a href='#' class='slider-controls'>" +
-                            "<img class='next' src='" + config.nextImage + "'/>" +
+                            "<img class='next' src='" + this.config.nextImage + "'/>" +
                             "<span class='counter'>" + (this.currentImage + 1) + "/" + (this.totalImages) + "</span>" +
                         "</a>"
                     );
