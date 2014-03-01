@@ -40,7 +40,7 @@
                 if(!this.isSingular() && this.config.navigation) {
                     this.$el.append(
                         "<a href='#' class='slider-controls'>" +
-                            "<span class='next'>&raquo;</span>" +
+                            "<img class='next' src='" + config.nextImage + "'/>" +
                             "<span class='counter'>" + (this.currentImage + 1) + "/" + (this.totalImages) + "</span>" +
                         "</a>"
                     );
@@ -322,6 +322,12 @@
         },
 
         navigation: true, // you really shouldn't disable it!
+
+        /**
+         * Path to image that will be shown in the navigation bar...
+         * Default is a white base64 encoded SVG arrow
+         */
+        nextImage: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMjAwcHgiIGhlaWdodD0iMjAwcHgiIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyMDAgMjAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwb2x5bGluZSBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHBvaW50cz0iDQoJNTUuMzU0LDUuOTQ2IDE0NC42NDYsOTkuNjE0IDU1LjM1NCwxOTQuMDUzICIvPg0KPC9zdmc+DQo=',
 
         height: '50%' // aspect ratio of the images, 50% equals 2:1 ratio
     };
