@@ -3,7 +3,7 @@
  * jQuery humbleSlider
  * ===================
  * @author Alexander Junger
- * @version 0.5.2
+ * @version 0.5.3
  *
  * See license file for information regarding use, distribution and manipulation of this piece of software.
  */
