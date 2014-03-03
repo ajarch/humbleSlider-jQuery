@@ -10,7 +10,7 @@
 
 (function($) {
 
-	$.fn.humbleSlider = function humbleSlider(config) {
+    $.fn.humbleSlider = function humbleSlider(config) {
 
         function HumbleSlider(el, config) {
             this.$el = $(el);
@@ -18,7 +18,7 @@
             this.$images = this.$container.find(".slider-image");
 
             this.config = config;
-            
+
             this.$container.css('transition', 'left ' + this.config.speed + 's ease');
 
 
@@ -38,7 +38,6 @@
             },
 
             init : function () {
-
                 /**
                  * TODO
                  * refactor according to presence of overview feature
@@ -52,7 +51,7 @@
                         "<a href='#' class='slider-controls'>" +
                             "<img class='next' src='" + this.config.nextImage + "'/>" +
                             "<span class='counter'>" + (this.currentImage + 1) + "/" + (this.totalImages) + "</span>" +
-                        "</a>"
+                            "</a>"
                     );
                 }
 
@@ -79,13 +78,13 @@
                 /**
                  * TODO
                  * refactor according to presence of swipesuggestInterval feature
-                else {
+                 else {
                     // stop suggesting swipe, if present, as soon as the slider is clicked on
                     this.$el.on('click', function() {
                         clearInterval(this.swipeSuggestInterval);
                     });
                 }
-                */
+                 */
 
                 if(this.config.swipe.enabled) {
                     $(this.config.swipe.trigger).find(this.$container).swipe( {
@@ -122,14 +121,14 @@
              * TODO
              * refactor according to presence of overview feature
              * @param e event for click on thumbnail
-            thumbnailListener : function(e) {
+             thumbnailListener : function(e) {
                 e.preventDefault();
                 var transitionOffset = this.currentImage;
                 this.currentImage = parseInt(e.currentTarget.dataset.image, 10);
                 transitionOffset -= this.currentImage;
                 this.slide(transitionOffset);
             },
-            */
+             */
 
             /**
              * Adjust all css values so the slider can actually work
@@ -143,12 +142,12 @@
                     float: "left",
                     width: 100 / this.totalImages + "%"
                 });
-                
-                this.$images.find('img').hisrc({useTransparentGif: true})
-                    .css({
-                        'height': 0,
-                        'padding-top': this.config.height
-                    });
+
+                this.$images.find('img').hisrc({useTransparentGif: true});
+                this.$images.find('.img-container').css({
+                    'height': '0px',
+                    'padding-top': this.config.height
+                });
             },
 
             /**
@@ -161,7 +160,7 @@
             /**
              * TODO
              * refactor according to presence of overview feature
-            refreshControls : function() {
+             refreshControls : function() {
                 if(this.currentImage === this.totalImages-1) {
                     this.$el.find(".slider-controls").addClass("hide");
                 } else {
@@ -188,7 +187,7 @@
                 /**
                  * TODO
                  * refactor according to presence of overview feature
-                this.refreshControls();
+                 this.refreshControls();
                  */
 
                 this.refreshCounter();
@@ -208,18 +207,18 @@
             },
 
             /*
-            setSwipeSuggest : function() {
-                this.$container.css('left', '-15px');
-                setTimeout(function() {
-                    this.$container.css('left', '7px');
+             setSwipeSuggest : function() {
+             this.$container.css('left', '-15px');
+             setTimeout(function() {
+             this.$container.css('left', '7px');
 
-                    setTimeout(function() {
-                        this.$container.css('left', '0px');
-                    }, 250);
-                }, 250);
-            },
+             setTimeout(function() {
+             this.$container.css('left', '0px');
+             }, 250);
+             }, 250);
+             },
 
-            swipeSuggestInterval : setInterval(this.setSwipeSuggest, 3000),
+             swipeSuggestInterval : setInterval(this.setSwipeSuggest, 3000),
              */
 
             /**
@@ -250,11 +249,11 @@
             scrollImages : function(distance, duration)
             {
                 /*
-                // clear swipeSuggestInterval on touch devices if still active
-                if(this.swipeSuggestInterval) {
-                    clearInterval(this.swipeSuggestInterval);
-                }
-                */
+                 // clear swipeSuggestInterval on touch devices if still active
+                 if(this.swipeSuggestInterval) {
+                 clearInterval(this.swipeSuggestInterval);
+                 }
+                 */
                 //inverse the number we set in the css
                 var value = (distance < 0 ? "" : "-") + Math.abs(distance).toString();
                 this.$container.css("transition", "left " + duration + "s ease");
@@ -300,17 +299,17 @@
             }
         }
 
-		this.each(function() {
-			var myConfig = $.extend({}, jQuery.fn.humbleSlider.DEFAULT_CONFIG, config);
-			$(this).data('humbleSlider', new HumbleSlider(this, myConfig));
-		});
-		return this; //allow chaining
-	};
+        this.each(function() {
+            var myConfig = $.extend({}, jQuery.fn.humbleSlider.DEFAULT_CONFIG, config);
+            $(this).data('humbleSlider', new HumbleSlider(this, myConfig));
+        });
+        return this; //allow chaining
+    };
 
     /**************************************************************************
      * YOU SHALL PASS (a config parameter instead of overwriting the default) *
      *************************************************************************/
-	jQuery.fn.humbleSlider.DEFAULT_CONFIG = {
+    jQuery.fn.humbleSlider.DEFAULT_CONFIG = {
         /**
          * Duration in seconds for sliding one image. Sliding 3 images means (3 * speed) = 1.5 sec default
          */
@@ -325,7 +324,7 @@
          * if swipe should always be active, set this to 'html' or 'body'.
          */
         swipe: {
-        enabled: true,
+            enabled: true,
             trigger: '.touch'
         },
 

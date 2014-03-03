@@ -24,11 +24,19 @@ body {
   }
 }
 
-.slider-image img {
-  width: 100%;
-  line-height: 0;
-  background-size: cover;
-  display: block;
+.slider-image {
+  .img-container {
+    position: relative;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    display: block;
+  }
 }
 
 a.slider-controls {
